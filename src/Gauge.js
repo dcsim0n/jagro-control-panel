@@ -21,8 +21,8 @@ export default class Gauge extends React.Component {
       return resp.json();
     })
     .then ( data =>{
-      console.assert(data.length > 0, "Warning, received 0 lenght data set")
-      const lastIdx = data.length - 1;
+      console.assert(data.length > 0, "Warning, received 0 length data set")
+      const lastIdx = 0 //data.length - 1;
       this.setState({
         measurement: data[lastIdx]
       },() => this.setFetchStatus( false ))
@@ -45,7 +45,7 @@ export default class Gauge extends React.Component {
     return (
       <div>
         <label htmlFor= { "gaugeId" + this.props.sensorNum } >Node: { this.props.nodemcuId } Sensor Number: { this.props.sensorNum }</label>   
-        <input name= { "gaugeId" + this.state.measurement.uniqueId } className="Guage" type="text" value= { this.state.measurement.value || '' } readOnly={ true }/>
+        <input name= { "gaugeId" + this.state.measurement.uniqueId } className="Guage" type="text" value= { this.state.measurement.value === undefined ? '' : this.state.measurement.value } readOnly={ true }/>
       </div>
     );
   }

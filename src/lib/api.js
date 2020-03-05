@@ -20,6 +20,17 @@ const API = {
     });
   },
 
+  getRelayStatus: function( nodemcuId, relayNumber ){
+    return fetch("http://pi02:/api/v1/relaystatus")
+    .then ( resp => {
+        if( resp.ok ){
+          return resp.json();
+        }else{
+          console.log(resp.statusText);
+        }
+      }) 
+  },
+
   deleteSchedule: function ( id ){
     return fetch(`${ API_ROOT }/schedules/${ id }`,{ method: 'DELETE' });
   },

@@ -14,7 +14,8 @@ export default class SensorSplash extends Component {
         {nodemcuId: 4, sensorNum: 3},
         {nodemcuId: 4, sensorNum: 4}
          // array of sensors to draw gauges for 
-      ]
+      ],
+
     }
   }
   // getLatest() {
@@ -30,6 +31,7 @@ export default class SensorSplash extends Component {
   render() {
     return (
       <div>
+      <h1>Sensor Output</h1>
         { this.state.measurements.map( sensor => <Gauge {...sensor }/> )}
       </div>
     )

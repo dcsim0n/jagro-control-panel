@@ -21,7 +21,7 @@ const API = {
   },
 
   getRelayStatus: function( nodemcuId, relayNumber ){
-    return fetch("http://pi02:/api/v1/relaystatus")
+    return fetch("http://pi02:3000/api/v1/relays")
     .then ( resp => {
         if( resp.ok ){
           return resp.json();

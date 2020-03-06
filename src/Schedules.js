@@ -106,6 +106,7 @@ export default class Schedules extends Component {
   render() {
     return (
       <div>
+        <h1>Command Schedules</h1>
         <form onSubmit={ ( e ) => this.handleNewSchedule( e ) }>
           <label htmlFor="scheduleStr">Schedule String</label>
           <input type="text" name="scheduleStr" id="scheduleStr" onChange={ ( e ) => this.setState({ scheduleStr: e.target.value }) }/>

@@ -31,6 +31,8 @@ class RelayLamp extends Component {
         {this.state.relayNum}
         { /* Remember relay logic is inverted, 1 = off , 0 = on */ }
         <input type="checkbox" name="status" id="status" checked={this.state.status===0 ? true : false } /> 
+        <button>On</button>
+        <button>Off</button>
       </div>
     )
   }

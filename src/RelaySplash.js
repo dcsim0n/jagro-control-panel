@@ -9,6 +9,8 @@ export default class RelaySplash extends Component {
         lamps: [
           {nodemcuId: 4, relayNum: 1 },
           {nodemcuId: 4, relayNum: 2 },
+          {nodemcuId: 8, relayNum: 1 },
+          {nodemcuId: 8, relayNum: 2 },
       ]
     }
   }
